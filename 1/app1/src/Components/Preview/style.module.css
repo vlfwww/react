@@ -1,0 +1,47 @@
+.preview{
+    display: flex;
+    max-width: 1180px;
+    margin: 100px auto;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 120px;
+    & .left{
+        max-width: 550px;
+        margin-right: 80px;
+        & .title{
+            font: 700 16px Montserrat;
+            color: rgba(43, 120, 139, 1);
+        }
+        & .text{
+            font: 400 56px Dela Gothic One;
+            margin: 35px 0;
+        }
+        & .addition{
+            font: 600 18px Montserrat;
+            color: rgba(117, 117, 117, 1);
+        }
+        & .about{
+            font: 700 16px Montserrat;
+            color: rgba(43, 120, 139, 1);
+            background-color: rgba(195, 220, 227, 1);
+            width: 155px;
+            border-radius: 100px;
+            padding: 14px 22px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        & .students{
+            display: flex;
+            font: 400 40px Dela Gothic One;
+            gap:5px;
+            & .plus{
+                color: rgba(43, 120, 139, 1);
+            }
+        }
+        & .st{
+            font: 600 16px Montserrat;
+            color: rgba(88, 88, 88, 1);
+            margin-left: 40px;
+        }
+    }
+}

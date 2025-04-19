@@ -1,0 +1,27 @@
+footer{
+    width: 1180px;
+    padding:40px 0px;
+    margin: 0 auto;
+    align-items: center;
+    font:600 14px Montserrat;
+    color: rgba(117, 117, 117, 1);
+    & .top{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: rgba(224, 224, 224, 1) solid 1.2px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        & .left, .right{
+            display: flex;
+            gap:30px;
+        }
+    }
+    & .bottom{
+        display: flex;
+        justify-content: space-between;
+        & .left{
+            display: flex;
+            gap:30px;
+        }
+    }
+}
