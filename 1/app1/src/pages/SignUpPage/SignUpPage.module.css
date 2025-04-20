@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+.first{
+    background-color: rgba(246, 245, 244, 1);
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 83px auto 0;
+    padding-bottom: 35px;
+    align-items: center;
+    & .left{
+        max-width: 519px;
+        & h1{
+            font: 400 56px Dela Gothic One;
+        }
+        & input{
+            border: 1px solid rgba(206, 212, 218, 1);
+            margin: 30px 0;
+            width: 519px;
+            height: 50px;
+            padding: 5px;
+            border-radius: 2px;
+            background-color: rgba(246, 245, 244, 1);
+        }
+        input::placeholder {
+            font: 400 20px 'Open Sans';
+            color: rgba(173, 181, 189, 1);
+        }
+        & .password{
+            margin-top: -30px;
+        }
+        & button{
+            width: 110px;
+            height: 44px;
+            border-radius: 100px;
+            background-color: rgba(43, 120, 139, 1);
+            color: rgba(255, 255, 255, 1);
+            font:700 16px Montserrat;
+            border: rgba(43, 120, 139, 1) solid 0px;
+        }
+    }
+    & .right{
+        max-width: 481px;
+    }
+}
