@@ -218,24 +218,24 @@ function App1(){
 //  22. На входе массив дат (строк). Отобразить ближайшую к сегодняшнему дню дату. 
 // Использовать new Date() и сравнение по времени.
 
-const arr = ['2025-04-25', '2025-04-20', '2025-04-23', '2025-04-27'];
-const today = new Date();
-let result = null;
+// const arr = ['2025-04-25', '2025-04-20', '2025-04-23', '2025-04-27'];
+// const today = new Date();
+// let result = null;
 
-for (let el of arr) {
-    const date = new Date(el);
-    if (date >= today) {
-        if (!result || date < result) {
-            result = date;
-        }
-    }
-}
+// for (let el of arr) {
+//     const date = new Date(el);
+//     if (date >= today) {
+//         if (!result || date < result) {
+//             result = date;
+//         }
+//     }
+// }
 
-return (
-    <div>
-        {result ? result.toDateString() : 'Нет ближайшей даты'}
-    </div>
-);
+// return (
+//     <div>
+//         {result ? result.toDateString() : 'Нет ближайшей даты'}
+//     </div>
+// );
 
 }
 export default App1;
