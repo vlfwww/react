@@ -7,6 +7,7 @@ import App4 from './pages/App4.js'
 import App5 from './pages/App5.js'
 import App6 from './pages/App6.js'
 import App7 from './pages/App7.js'
+import App8 from './pages/App8.js'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/app5" element={<App5/>}></Route>
       <Route path="/app6" element={<App6/>}></Route>
       <Route path="/app7" element={<App7/>}></Route>
+      <Route path="/app8" element={<App8/>}></Route>
     </Routes>
   );
 }
