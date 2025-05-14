@@ -91,5 +91,126 @@ function App7() {
 // )
 
 
+// Создай инпут с типом «password» и кнопку «Показать/скрыть». При нажатии меняется type у инпута.
+// Подсказка: С useRef можно напрямую изменить ref.current.type.
+
+// const t =  useRef(null)
+// const f =()=>t.current.type==='text'?t.current.type='password':t.current.type='text';
+
+// return (
+//     <div>
+//         <input ref = {t} type='password' />
+//         <button onClick={f}>{t.current?.type === 'text' ? 'Скрыть' : 'Показать'}</button>
+//     </div>
+// )
+
+// Создай текстовое поле, и сохраняй значение в useRef, а не в useState. Добавь кнопку «Показать введённое», которая покажет текст в alert.
+// const val = useRef('')
+// const inp = useRef()
+// const f =()=>val.current=inp.current.value;
+// const cl=()=>alert(val.current)
+
+// return (
+//     <div>
+//         <input ref ={inp} type="text" onChange={f}/>
+//         <button onClick={cl}>Show</button>
+//     </div>
+// )
+
+// Создайте счетчик в виде h1 и две кнопки +1 и −1. По клику на кнопки значение textContent для заголовка должно меняться
+// const val = useRef(0)
+// const h = useRef()
+// const pl =()=>{
+//     val.current+=1;
+//     h.current.textContent=val.current
+// }
+// const min =()=>{
+//     val.current-=1;
+//     h.current.textContent=val.current
+// }
+
+// return (
+//     <div>
+//         <h1 ref ={h}>0</h1>
+//         <button onClick={pl}>+1</button>
+//         <button onClick={min}>-1</button>
+//     </div>
+// )
+
+// Сделай форму с несколькими инпутами и кнопку «Сбросить». При клике форма должна очиститься без использования useState.
+// Подсказка: Хранить ref на каждый <input> и обнулять через .value = ''.
+// const inp1=useRef()
+// const inp2=useRef()
+// const f =()=>{
+//     inp1.current.value='';
+//     inp2.current.value='';
+// }
+// return (
+//     <div>
+//         <input ref={inp1} type="text" />
+//         <input ref={inp2} type="text" />
+//         <button onClick={f}>Сбросить</button>
+//     </div>
+// )
+
+// Сохрани и выведи текущее время (Date.now()), но так, чтобы оно не менялось при ререндере.
+
+// const timeRef = useRef(new Date());
+
+//   return (
+//     <div>
+//       <h1>{timeRef.current.toLocaleTimeString()}</h1>
+//     </div>
+//   );
+
+// Сделай кнопку, которая кликается автоматически через 2 секунды после монтирования.
+// Подсказка: Через ref вызови .click() у кнопки внутри useEffect.
+// const but = useRef();
+
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       but.current.click(); 
+//     }, 2000);
+
+//     return () => clearInterval(interval); 
+//   }, []);
+
+//   const l = () => {
+//     console.log('hello');
+//   };
+
+//   return (
+//     <div>
+//       <button ref={but} onClick={l}>Click</button>
+//     </div>
+//   );
+
+// Сделай список элементов с кнопкой удаления. Удаляй DOM-узел напрямую (без useState).
+// Подсказка: Работа с ref.current.remove() (в реальных приложениях лучше так не делать — но для практики полезно).
+// const p1 = useRef();
+//   const p2 = useRef();
+//   const p3 = useRef();
+//   const p4 = useRef();
+
+//   return (
+//     <div>
+//         <div ref={p1}>
+//             <p>1</p> 
+//             <button onClick={() => p1.current.remove()}>Удалить</button>
+//         </div>
+//         <div ref={p2}>
+//             <p>2</p> 
+//             <button onClick={() => p2.current.remove()}>Удалить</button>
+//         </div>
+//         <div ref={p3}>
+//             <p>3</p> 
+//             <button onClick={() => p3.current.remove()}>Удалить</button>
+//         </div>
+//         <div ref={p4}>
+//             <p>4</p> 
+//             <button onClick={() => p4.current.remove()}>Удалить</button>
+//         </div>
+//     </div>
+//   );
 }
 export default App7
