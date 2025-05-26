@@ -180,21 +180,21 @@ function App5() {
   // Отобразить результат в заголовок. Таким образом у вас получается игра в
   // предсказателя:гдепользовательвводитвопросвinput, адалееполучаетответна
   // заданныйвопрос
-const [value,setValue]=useState('');
-const [answ,setAnsw] = useState('');
-const change =(e)=>{
-    setValue(e.target.value)
-}
-async function send(){
-    const rez = await axios.get('https://yesno.wtf/api');
-    setAnsw(rez.data.answer);
-}
-  return(
-    <div>
-        <input type="text" onChange={change}/>
-        <button onClick={send}>Send</button>
-        <h1>{answ}</h1>
-    </div>
-  )
+// const [value,setValue]=useState('');
+// const [answ,setAnsw] = useState('');
+// const change =(e)=>{
+//     setValue(e.target.value)
+// }
+// async function send(){
+//     const rez = await axios.get('https://yesno.wtf/api');
+//     setAnsw(rez.data.answer);
+// }
+//   return(
+//     <div>
+//         <input type="text" onChange={change}/>
+//         <button onClick={send}>Send</button>
+//         <h1>{answ}</h1>
+//     </div>
+//   )
 }
 export default App5;

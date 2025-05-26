@@ -8,6 +8,8 @@ import App5 from './pages/App5.js'
 import App6 from './pages/App6.js'
 import App7 from './pages/App7.js'
 import App8 from './pages/App8.js'
+import App9 from './pages/App9.js'
+import App10 from './pages/App10.js'
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Route path="/app6" element={<App6/>}></Route>
       <Route path="/app7" element={<App7/>}></Route>
       <Route path="/app8" element={<App8/>}></Route>
+      <Route path="/app9" element={<App9/>}></Route>
+      <Route path="/app10" element={<App10/>}></Route>
     </Routes>
   );
 }
