@@ -121,6 +121,7 @@ import App12 from './pages/App12.js'
 import App13 from './pages/App13.js'
 import App14 from './pages/App14.js'
 import App15 from './pages/App15.js'
+import App16 from './pages/App16.js'
 
  function App() {
   return (
@@ -129,6 +130,7 @@ import App15 from './pages/App15.js'
         <Route path="/app13" element={<App13/>}></Route>
         <Route path="/app14" element={<App14/>}></Route>
         <Route path="/app15" element={<App15/>}></Route>
+         <Route path="/app16" element={<App16/>}></Route>
       </Routes>
   );
 }

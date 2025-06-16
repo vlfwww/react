@@ -247,41 +247,71 @@ import React, {
 //  Массив: const items = Array.from({ length: 50 }, (_, i) => ({ id: i + 1, name: `Элемент ${i + 1}`,
 // description: `Описание элемента ${i + 1}` }));
 
+// const App15 = () => {
+//   const items = Array.from({ length: 50 }, (_, i) => ({
+//     id: i + 1,
+//     name: `Элемент ${i + 1}`,
+//     description: `Описание элемента ${i + 1}`,
+//   }));
+
+//   const [filteredItems, setFilteredItems] = useState(
+//     items.filter((el) => el.id <= 10)
+//   );
+
+//   const f1 = () => setFilteredItems(items.filter((el) => el.id <= 10));
+//   const f2 = () =>
+//     setFilteredItems(items.filter((el) => el.id > 10 && el.id <= 20));
+//   const f3 = () =>
+//     setFilteredItems(items.filter((el) => el.id > 20 && el.id <= 30));
+//   const f4 = () =>
+//     setFilteredItems(items.filter((el) => el.id > 30 && el.id <= 40));
+//   const f5 = () =>
+//     setFilteredItems(items.filter((el) => el.id > 40 && el.id <= 50));
+
+//   return (
+//     <div>
+//       {filteredItems.map((el) => (
+//         <p key={el.id}>
+//           {el.id} - {el.name} - {el.description}
+//         </p>
+//       ))}
+//       <button onClick={f1}>1-10</button>
+//       <button onClick={f2}>10-20</button>
+//       <button onClick={f3}>20-30</button>
+//       <button onClick={f4}>30-40</button>
+//       <button onClick={f5}>40-50</button>
+//     </div>
+//   );
+// };
+
+// export default App15;
+
+// 1. Создайте слайдер с кнопками «Вперёд» и «Назад», отображающий одно изображение за раз.
+// Хуки: useState, useCallback, useMemo
+import img1 from '../1.jpg';
+import img2 from '../2.jpg';
+import img3 from '../3.jpg';
+
 const App15 = () => {
-  const items = Array.from({ length: 50 }, (_, i) => ({
-    id: i + 1,
-    name: `Элемент ${i + 1}`,
-    description: `Описание элемента ${i + 1}`,
-  }));
-
-  const [filteredItems, setFilteredItems] = useState(
-    items.filter((el) => el.id <= 10)
-  );
-
-  const f1 = () => setFilteredItems(items.filter((el) => el.id <= 10));
-  const f2 = () =>
-    setFilteredItems(items.filter((el) => el.id > 10 && el.id <= 20));
-  const f3 = () =>
-    setFilteredItems(items.filter((el) => el.id > 20 && el.id <= 30));
-  const f4 = () =>
-    setFilteredItems(items.filter((el) => el.id > 30 && el.id <= 40));
-  const f5 = () =>
-    setFilteredItems(items.filter((el) => el.id > 40 && el.id <= 50));
-
+  const arr = [img1,img2,img3];
+  let ind = 0;
+  const [img,setImg] = useState(arr[0]);
+  const plus = useCallback(()=>{
+    for(let i=0;i<arr.length;i++){
+      if(arr[i]===img) ind = i;
+    }
+    setImg(arr[ind+1])
+  })
   return (
     <div>
-      {filteredItems.map((el) => (
-        <p key={el.id}>
-          {el.id} - {el.name} - {el.description}
-        </p>
-      ))}
-      <button onClick={f1}>1-10</button>
-      <button onClick={f2}>10-20</button>
-      <button onClick={f3}>20-30</button>
-      <button onClick={f4}>30-40</button>
-      <button onClick={f5}>40-50</button>
+      <div>{img}</div>
+     <button onClick={plus}>Вперед</button>
+     <button>Назад</button>
     </div>
   );
 };
 
 export default App15;
+
+// 2. Постепенно выводите текст <"Hello, world!" - это классическое приветствие, которое используется в программировании для обозначения начала новой программы или проекта> по одной букве, как печатная машинка.
+// Хуки: useState, useEffect
